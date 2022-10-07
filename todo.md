@@ -13,16 +13,18 @@
     Values: TASK    VARCHAR
             COMPLETED   BOOLEAN
 
-    []modules - connect database
+    [x]modules - connect database
         
 
-
+[X] Please include a `database.sql` text file in your repo that includes all of your `CREATE TABLE` queries. This is so we can re-create your database while testing your app.
 
 [] Create a front end experience that allows a user to create a Task.
 
-[] When the Task is created, it should be stored inside of a database (SQL)
+[]GET and RENDER
 
 [] Whenever a Task is created the front end should refresh to show all tasks that need to be completed.
+
+[] When the Task is created, it should be stored inside of a database (SQL)
 
 [] Each Task should have an option to 'Complete' 
 [] or 'Delete'.
@@ -35,7 +37,7 @@
 
 [] Be sure to create a new database through Postico. Use the name `weekend-to-do-app`. You will need to use this name in your database connection configuration on your server.
 
-[] Please include a `database.sql` text file in your repo that includes all of your `CREATE TABLE` queries. This is so we can re-create your database while testing your app.
+
 
 Logic needed:
 -On ready get and render
