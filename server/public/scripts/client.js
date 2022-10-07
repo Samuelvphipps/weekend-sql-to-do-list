@@ -119,7 +119,7 @@ function render(array){
             <tr class="${classId}">
                 <td>${task.task}</td>
                 <td>${ifDone}</td>
-                <td>
+                <td class="centerContent">
                     <button data-id="${task.id}" class="doneBtn">Mark Completed</button>
                         <br/>
                     <button data-id="${task.id}" class="deleteBtn">Delete</button>

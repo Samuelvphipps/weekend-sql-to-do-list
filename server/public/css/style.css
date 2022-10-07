@@ -1,7 +1,99 @@
 .green{
-    background-color: lightgreen;
+    background-color: rgb(180, 243, 180);
+}
+
+body{
+    background-image: linear-gradient(rgb(70, 66, 66),rgb(213, 213, 213));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .red{
-    background-color: lightcoral;
+    background-color: rgb(244, 161, 161);
+}
+
+#submitBtn{
+    background-color: rgb(69, 200, 243);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.centerContent{
+    text-align: center;
+}
+
+button:active{
+    color: white;
+}
+
+.doneBtn{
+    background-color: rgb(150, 247, 150);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.deleteBtn{
+    background-color: rgb(251, 9, 5);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+    font-size: large;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+table{
+    border:3px solid black;
+    margin: 1em auto;
+    width: 60%;
+    
+    border-collapse: collapse;
+    float:inherit;
+
+}
+
+td {
+    border: 1px solid black;
+    font-weight: 400;
+    padding: 0px 10px;
+}
+
+th{
+    background-color: antiquewhite;
+    font-size: x-large;
+}
+
+button{
+    margin: .25em
+}
+
+header{
+    margin: 1em;
+    border: 4px dotted black;
+    background-color: antiquewhite;
+    text-align: center;
+}
+#title{
+    margin: 10px;
+}
+#form{
+    padding: 10px;
+    min-width: 300px;
+    float: left;
+    background-color: antiquewhite;
+    border:1px solid black;
+    text-align: center;
+    margin: 1em;
+}
+textarea{
+    width: 75%;
+    height: 4em;
 }
