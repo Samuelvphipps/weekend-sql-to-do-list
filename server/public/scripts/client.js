@@ -5,6 +5,7 @@ function onReady(){
     getTasks();
     //click listeners
     $('#addTask').on('submit', onSubmit);
+    $('#taskList').on('click', '.doneBtn', markComplete);
 }
 
 // get Tasks
@@ -55,6 +56,25 @@ function onSubmit(event){
 }
 
 // put tasks
+
+function markComplete(){
+    //id of task to be changed
+    let taskId= $(this).data('id');
+    console.log('in markComplete on id number:', taskId);
+
+    //ajax put method
+    $.ajax({
+        method: 'PUT',
+        url: `/todo/${taskId}`,
+    })
+        .then((response)=>{
+            console.log('The task was marked completed');
+            getTasks();
+        })
+        .catch(err=>{
+            console.log('in markComplete PUT error', err);
+        });
+}
 
 //delete tasks
 
