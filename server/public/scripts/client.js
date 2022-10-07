@@ -15,9 +15,9 @@ function getTasks(){
         type: 'GET',
         url: '/todo'
     })
-        .then((respnse)=>{
-            console.log('in response and response is', respnse);
-            //render()
+        .then((response)=>{
+            console.log('in response and response is', response);
+            render(response)
         })
         .catch(err=>{
             console.log('in getTask error', err);
@@ -32,3 +32,31 @@ function getTasks(){
 //delete tasks
 
 //render
+
+function render(array){
+    console.log('in renderFn');
+    //empty table
+    $('#taskList').empty();
+    //loop and append
+
+    for(let task of array){
+        //logic to check if done or not. Variable to display on dom is either empty or adds checked to box
+        let ifDone='';
+        let checked=''
+        if(task.completed===true){
+            ifDone='class="done"';
+            checked='checked';
+        };
+
+        $('#taskList').append(`
+            <tr ${ifDone}>
+                <td>${task.task}</td>
+                <td>
+                    <input type="checkbox" data-id="${task.id}" class="doneBtn" ${checked}>Done</input>
+                        <br/>
+                    <button data-id="${task.id}" class="deleteBtn">Delete</button>
+                </td>
+            </tr>
+        `);
+    }
+}
