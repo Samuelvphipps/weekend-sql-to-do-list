@@ -41,18 +41,17 @@ function render(array){
 
     for(let task of array){
         //logic to check if done or not. Variable to display on dom is either empty or adds checked to box
-        let ifDone='';
-        let checked=''
+        let ifDone='Not Completed';
         if(task.completed===true){
-            ifDone='class="done"';
-            checked='checked';
+            ifDone='Completed! 🔥';
         };
 
         $('#taskList').append(`
             <tr ${ifDone}>
                 <td>${task.task}</td>
+                <td>${ifDone}</td>
                 <td>
-                    <input type="checkbox" data-id="${task.id}" class="doneBtn" ${checked}>Done</input>
+                    <button data-id="${task.id}" class="doneBtn">Mark Completed</button>
                         <br/>
                     <button data-id="${task.id}" class="deleteBtn">Delete</button>
                 </td>
