@@ -2,11 +2,20 @@
     []server
 
     [x]html
-    []client.js -> source to html
-    []jquery ->source to html
-    []css
-    []routes set up later
-    []modules
+    [x]client.js -> source to html
+    [x]jquery ->source to html
+    [x]css
+    [x]routes set up for endpoint /todo
+    [x] create database 
+        database structure:
+    NAME: task_list
+    HEADING OF TABLE: tasks
+    Values: TASK    VARCHAR
+            COMPLETED   BOOLEAN
+
+    []modules - connect database
+        
+
 
 
 [] Create a front end experience that allows a user to create a Task.
@@ -29,21 +38,21 @@
 [] Please include a `database.sql` text file in your repo that includes all of your `CREATE TABLE` queries. This is so we can re-create your database while testing your app.
 
 Logic needed:
-
+-On ready get and render
 Task add and display control
--On load get and render
 -On submit post new data to server and then to DB
     on complete post get data and re-render
 
-In each task have a completed operation
+In each task have a completed operation  PUT
     -on click listener "mark completed fn"
     - Sends a put to modify boolean on db
     - modifies the element to change look (adds or changes class)
     - rerender
-    SSSSSSSS
+
+    SSSSSSSSttttttreeeeeettttchhhhhh
     Include an input for time completed with button that changes background green
 
-In each task have a delete button
+In each task have a delete button  DELETE
     -On delete send delete request and modify db
     -rerender
 
