@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 
 //get tasks
 
-router.get('/', (req,res)=>{
+router.get('/', (req, res)=>{
     //log
     console.log('in todo GET');
     //pool query
@@ -25,7 +25,12 @@ router.get('/', (req,res)=>{
 
 //post tasks
 
+router.post('/', (req, res)=>{
+    let newTask=req.body;
+    console.log('new Task is:', newTask);
 
+    // res.sendStatus(201); -> used this to test reciept
+})
 
 //PUT tasks completed
 

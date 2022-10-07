@@ -1,8 +1,10 @@
 $(document).ready(onReady);
 
 function onReady(){
-    console.log('in JQUERY JS!!!');
+    // console.log('in JQUERY JS!!!');
     getTasks();
+    //click listeners
+    $('#addTask').on('submit', onSubmit);
 }
 
 // get Tasks
@@ -24,8 +26,33 @@ function getTasks(){
         })
 }
 
-
 // post tasks
+
+function onSubmit(event){
+    event.preventDefault();
+    console.log('in onSubmit');
+    //create object
+    let task={
+        task: $('#taskInput').val()
+    };
+    
+    console.log('task=', task);
+    //ajax
+    $.ajax({
+        type: 'POST',
+        url: '/todo',
+        data: task
+    })
+        .then((response)=>{
+            console.log('new task added');
+            $('#taskInput').val('')
+            getTasks();
+        })
+        .catch(err=>{
+            console.log('in POST error:', err);
+        });
+
+}
 
 // put tasks
 
