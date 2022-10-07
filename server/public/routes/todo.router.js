@@ -5,6 +5,12 @@ const pool = require('../modules/pool');
 
 //get tasks
 
+router.get('/', (req,res)=>{
+    //log
+    console.log('in todo GET');
+    //pool query
+
+})
 
 //post tasks
 
@@ -15,8 +21,6 @@ const pool = require('../modules/pool');
 
 
 //delete tasks
-
-
 
 
 
