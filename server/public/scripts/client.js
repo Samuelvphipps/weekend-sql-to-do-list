@@ -90,7 +90,7 @@ function onDelete(){
         url: `/todo/${taskId}`
     })
         .then((response)=>{
-            console.log('in DELETE response', response);
+            // console.log('in DELETE response', response);
             getTasks();
         })
         .catch(err=>{
