@@ -33,7 +33,7 @@
 
 [X] Whether or not a Task is complete should also be stored in the database.
 
-[] Deleting a Task should remove it both from the front end as well as the Database.
+[X] Deleting a Task should remove it both from the front end as well as the Database.
 
 [X] Be sure to create a new database through Postico. Use the name `weekend-to-do-app`. You will need to use this name in your database connection configuration on your server.
 
@@ -51,21 +51,17 @@ Logic needed:
     - rerender
 
 
-In each task have a delete button  DELETE
+[X]In each task have a delete button  DELETE
     -On delete send delete request and modify db
     -rerender
 
-
-
-DB format
-
-    
 
 
 
 ### Styling
 
 Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
-  - background color of the page
-  - font family and size
-  - text color & or background color of tasks *to show whether or not they have been completed*
+
+ [] - background color of the page
+ [] - font family and size
+ [] - text color & or background color of tasks *to show whether or not they have been completed*
