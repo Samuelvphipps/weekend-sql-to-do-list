@@ -12,12 +12,21 @@ body{
 }
 
 #submitBtn{
-    background-color: rgb(69, 200, 243);
+    background-color: rgb(180, 243, 180);
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
     font-weight: bold;
     font-size: large;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h1{
+    font-size: 40px;
+    margin: 0;
 }
 
 .centerContent{
@@ -64,6 +73,7 @@ td {
     border: 1px solid black;
     font-weight: 400;
     padding: 0px 10px;
+    font-size: 20px
 }
 
 th{

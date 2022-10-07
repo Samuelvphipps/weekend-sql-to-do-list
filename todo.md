@@ -1,5 +1,5 @@
-[]Setup
-    []server
+[x]Setup
+    [x]server
 
     [x]html
     [x]client.js -> source to html
@@ -63,5 +63,5 @@ Logic needed:
 Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
 
  [X] - background color of the page
- [] - font family and size
- [] - text color & or background color of tasks *to show whether or not they have been completed*
+ [X] - font family and size
+ [X] - text color & or background color of tasks *to show whether or not they have been completed*
