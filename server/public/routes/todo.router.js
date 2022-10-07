@@ -48,7 +48,29 @@ router.post('/', (req, res)=>{
 
 //PUT tasks completed
 
+router.put('/:id', (req, res)=>{
+    let taskId=req.params.id;
+    console.log('in /todo PUT with ID of:', taskId);
+    
+    // sql text and params
+    sqlText=`
+        UPDATE "tasks"
+        SET "completed" = NOT "completed"
+        WHERE "id" = $1;
+    `;              //put in a toggle in case they didnt actually finish
 
+    sqlParams=[taskId];
+
+    //pool.query
+    pool.query(sqlText, sqlParams)
+        .then((dbRes)=>{
+            res.sendStatus(201)
+        })
+        .catch(err=>{
+            console.log('in /todo PUT error', err);
+            res.sendStatus(500);
+        });
+})
 
 //delete tasks
 

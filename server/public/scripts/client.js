@@ -73,9 +73,7 @@ function markComplete(){
         })
         .catch(err=>{
             console.log('in markComplete PUT error', err);
-        })
-
-
+        });
 }
 
 //delete tasks
