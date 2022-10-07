@@ -3,7 +3,18 @@ const router = express.Router();
 
 const pool = require('../modules/pool');
 
+//get tasks
 
+
+//post tasks
+
+
+
+//PUT tasks completed
+
+
+
+//delete tasks
 
 
 
