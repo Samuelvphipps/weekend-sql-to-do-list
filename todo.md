@@ -29,30 +29,27 @@
 [X] Each Task should have an option to 'Complete' 
 [X] or 'Delete'.
 
-[] When a Task is complete, its visual representation should change on the front end. For example, the background of the task container could change from gray to green. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
+[X] When a Task is complete, its visual representation should change on the front end. For example, the background of the task container could change from gray to green. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
 
 [X] Whether or not a Task is complete should also be stored in the database.
 
 [] Deleting a Task should remove it both from the front end as well as the Database.
 
-[] Be sure to create a new database through Postico. Use the name `weekend-to-do-app`. You will need to use this name in your database connection configuration on your server.
+[X] Be sure to create a new database through Postico. Use the name `weekend-to-do-app`. You will need to use this name in your database connection configuration on your server.
 
 
 
 Logic needed:
--On ready get and render
-Task add and display control
--On submit post new data to server and then to DB
+[x]-On ready get and render Task add and display control
+[x]On submit post new data to server and then to DB
     on complete post get data and re-render
 
-In each task have a completed operation  PUT
+[x]In each task have a completed operation  PUT
     -on click listener "mark completed fn"
     - Sends a put to modify boolean on db
     - modifies the element to change look (adds or changes class)
     - rerender
 
-    SSSSSSSSttttttreeeeeettttchhhhhh
-    Include an input for time completed with button that changes background green
 
 In each task have a delete button  DELETE
     -On delete send delete request and modify db

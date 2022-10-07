@@ -6,6 +6,8 @@ function onReady(){
     //click listeners
     $('#addTask').on('submit', onSubmit);
     $('#taskList').on('click', '.doneBtn', markComplete);
+    //delete me time
+    $('#taskList').on('click', '.deleteBtn', onDelete);
 }
 
 // get Tasks
@@ -77,6 +79,24 @@ function markComplete(){
 }
 
 //delete tasks
+
+function onDelete(){
+    let taskId=$(this).data('id');
+    console.log('in onDelete and the id is:', taskId);
+    
+    //ajax
+    $.ajax({
+        method: 'DELETE',
+        url: `/todo/${taskId}`
+    })
+        .then((response)=>{
+            // console.log('in DELETE response', response);
+            getTasks();
+        })
+        .catch(err=>{
+            console.log('in DELETE error', err);
+        });
+}
 
 //render
 
